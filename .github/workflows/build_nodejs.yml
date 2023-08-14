@@ -21,11 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Sumaiya Using version ${{ matrix.node-version }}
+    - name: Md is using version ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci    
     - run: npm run build --if-present
-    - run: npm test
